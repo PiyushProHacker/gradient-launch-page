@@ -1,8 +1,14 @@
+import { motion } from "framer-motion";
 import { Waves } from "lucide-react";
 
 const Navigation = () => {
   return (
-    <nav className="flex items-center justify-between w-full px-8 py-6">
+    <motion.nav 
+      className="flex items-center justify-between w-full px-8 py-6"
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+    >
       {/* Logo */}
       <div className="flex items-center">
         <Waves className="w-8 h-8 text-foreground" strokeWidth={2} />
@@ -29,7 +35,7 @@ const Navigation = () => {
           </div>
         </div>
       </div>
-    </nav>
+    </motion.nav>
   );
 };
 
