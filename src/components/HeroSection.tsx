@@ -68,13 +68,13 @@ const HeroSection = () => {
             placeholder="Please enter your email address"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="flex-1 input-glow transition-all duration-300"
+            className="flex-1 bg-muted border-muted text-foreground placeholder:text-muted-foreground input-glow transition-all duration-300"
             required
           />
           <Button 
             type="submit" 
-            size="default"
-            className="px-6 transition-all duration-300 hover:scale-105"
+            variant="default"
+            className="bg-primary text-primary-foreground hover:bg-primary/90 px-6 transition-all duration-300 hover:scale-105"
           >
             Notify Me
           </Button>
